@@ -46,7 +46,7 @@ CHAINCODE_NAME='test-chaincode'
 # CHAINCODE_NAME='users'
 
 # default image tag
-IMAGETAG="2.2"
+IMAGETAG="2.5.14"
 # default ca image tag
 CA_IMAGETAG="latest"
 # default database
