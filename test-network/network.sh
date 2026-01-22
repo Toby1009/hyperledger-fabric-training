@@ -562,8 +562,8 @@ else
 fi
 
 if [ "${MODE}" == "up" ]; then
-  createOrgs
   networkDown
+  createOrgs
   networkUp
   createChannel
   # deployCC

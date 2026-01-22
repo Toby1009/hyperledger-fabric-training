@@ -9,7 +9,7 @@ networks:
 services:
   orderer1.cathaybc.com:
     container_name: orderer1.cathaybc.com
-    image: hyperledger/fabric-orderer:2.2.1
+    image: hyperledger/fabric-orderer:2.5.14
     environment:
       - FABRIC_LOGGING_SPEC=INFO
       - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0

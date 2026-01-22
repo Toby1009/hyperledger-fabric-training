@@ -9,7 +9,7 @@ networks:
 services:
   peer1.org1.cathaybc.com:
     container_name: peer1.org1.cathaybc.com
-    image: hyperledger/fabric-peer:2.2.1
+    image: hyperledger/fabric-peer:2.5.14
     environment:
       #Generic peer variables
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
@@ -50,9 +50,7 @@ services:
       - /bin/sh
       - -c
       - |
-        wget https://go.dev/dl/go1.14.6.linux-amd64.tar.gz
-        tar -C /usr/local -xzf go1.14.6.linux-amd64.tar.gz
-        mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
+        apt-get update && apt-get install -y golang
         peer node start
     ports:
       # HOST_PORT:CONTAINER_PORT，若啟動多個節點只須改 HOST_PORT 即可
